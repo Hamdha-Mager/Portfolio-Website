@@ -13,9 +13,9 @@ body{
 
 header{
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    inline-size: 100%;
     padding: 20px 10px;
     background: transparent;
     display: flex;
@@ -36,10 +36,17 @@ header{
     color: #ededed;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 35px;
+    margin-inline-start: 35px;
 }
 
 .navbar a:hover,
 .navbar a.active{
     color: #00abf0;
+}
+
+.home {
+    block-size: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
 }
