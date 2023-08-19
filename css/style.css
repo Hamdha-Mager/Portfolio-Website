@@ -80,6 +80,20 @@ header{
     font: 700;
     font-style: italic;
 }
+
+.home2{
+    block-size: 100vh;
+    background: url(assets/image3.jpg) no-repeat;
+    background-size:40%;
+    top: 0;
+    bottom: 0;
+    background-position: right;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    font: 700;
+    font-style: italic;
+}
 .home-content{
     max-inline-size: 600px;
 }
@@ -223,6 +237,81 @@ header{
     animation-delay: 2.5s;
     z-index: 100;
 }
+
+.links {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.link-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.link-item a {
+    text-decoration: none;
+    color: black;
+}
+
+.link-item i {
+    font-size: 24px;
+}
+
+.link-item span {
+    font-size: 14px;
+}
+
+.links::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    bottom: 50%;
+    right: 0;
+    width: 120%;
+    height: 100%;
+    background:#081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 100;
+}
+
+
+.links a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 100%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.links a:hover{
+    color: #081b29;
+}
+
+
+.links a :hover{
+    color: #081b29;
+}
+
+.links a:hover::before{
+    width: 100%;
+} 
 
 /*KEYFRAMES ANIMATION*/
 
