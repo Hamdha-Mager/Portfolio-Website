@@ -420,7 +420,7 @@ header{
     opacity: .8;
 }
 
-.home1-imgHover::after{
+.home-imgHover::after{
     content: '';
     position: absolute;
     top: 0;
@@ -484,13 +484,6 @@ header{
     color: black;
 }
 
-.link-item i {
-    font-size: 24px;
-}
-
-.link-item span {
-    font-size: 14px;
-}
 
 .links::before{
     content: '';
@@ -515,7 +508,7 @@ header{
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #00abf0;
+    border: 2px transparent #00abf0;
     border-radius: 100%;
     font-size: 20px;
     color: #00abf0;
@@ -523,6 +516,19 @@ header{
     z-index: 1;
     overflow: hidden;
     transition: 1s;
+}
+
+.links a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120%;
+    height: 100%;
+    background:#081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 100;
 }
 
 .links a:hover{
@@ -536,7 +542,46 @@ header{
 
 .links a:hover::before{
     width: 100%;
+    
 } 
+
+.link-item i {
+    position: relative;
+    font-size: 20px;
+}
+.link-item i::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+}
+
+
+.link-item span {
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    animation-delay: 2s;
+
+}
+
+.link-item span::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+}
+
 
 .link1 {
     position: absolute;
@@ -553,6 +598,8 @@ header{
     align-items: center;
     gap: 20px;
 }
+
+
 
 .link1-item a{
     text-decoration: none;
@@ -583,7 +630,7 @@ header{
 
 }
 
-.link1-item span::before{
+.link1-item span::after{
     content: '';
     position: absolute;
     top: 0;
